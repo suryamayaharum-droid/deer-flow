@@ -1,0 +1,35 @@
+{
+  "schema": "meaw.component/v1",
+  "name": "deer-flow",
+  "repository": "suryamayaharum-droid/deer-flow",
+  "role": "deep-research-super-agent",
+  "capabilities": [
+    "deep-research",
+    "context-engineering",
+    "sandbox-execution",
+    "subagent-orchestration",
+    "long-term-memory",
+    "mcp-server"
+  ],
+  "interfaces": {
+    "http": "http://localhost:2026",
+    "mcp": true
+  },
+  "memory": {
+    "mode": "bridge",
+    "authority": false
+  },
+  "health": [
+    {"type": "command", "argv": ["make", "check"]}
+  ],
+  "lifecycle": "pending",
+  "trust": "owned-fork",
+  "priority": 65,
+  "metadata": {
+    "ecosystem": "MEAW",
+    "target_system": "research-os",
+    "integration": "incubating-research-engine",
+    "promotion_requires": ["adapter", "sandbox-policy", "integration-tests"],
+    "discovery_executes_commands": false
+  }
+}
